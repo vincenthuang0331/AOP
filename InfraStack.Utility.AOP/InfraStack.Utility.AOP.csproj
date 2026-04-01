@@ -6,8 +6,16 @@
         <AssemblyVersion>1.0.0</AssemblyVersion>
         <FileVersion>1.0.0</FileVersion>
         <Version>1.0.0</Version>
-        <Authors>W.H. Huang</Authors>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>vincenthuang0331</Authors>
+        <Company>InfraStack</Company>
+        <Description>AOP cache library for InfraStack, including CacheAttribute,
+            MethodBoundaryAttribute, ICacheRepository, etc.</Description>
+        <PackageTags>aop;cache;postsharp;attribute;dependency-injection</PackageTags>
+        <RepositoryUrl>https://github.com/vincenthuang0331/InfraStack.Utility.AOP</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageProjectUrl>https://github.com/vincenthuang0331/InfraStack.Utility.AOP</PackageProjectUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
         <NoWarn>1701;1702;CS1591</NoWarn>
     </PropertyGroup>
 
