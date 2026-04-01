@@ -4,11 +4,10 @@
 
 ## 功能特色
 
-- 🎯 **方法攔截** - 透過 `MethodBoundaryAttribute` 實現 AOP 攔截
-- 💾 **智慧快取** - 支援多種快取策略與多儲存庫管理
-- 🔄 **非同步支援** - 完整支援 `Task`、`Task<T>` 與同步方法
-- 🔒 **執行緒安全** - 內建 SemaphoreSlim 防止快取擊穿
-- 💉 **依賴注入** - 整合 Microsoft.Extensions.DependencyInjection
+- **方法攔截** - 透過 `MethodBoundaryAttribute` 實現 AOP 攔截
+- **智慧快取** - 支援多種快取策略與多儲存庫管理
+- **非同步支援** - 完整支援 `Task`、`Task<T>` 與同步方法
+- **執行緒安全** - 內建 SemaphoreSlim 防止快取擊穿
 
 ## 快速開始
 
@@ -72,41 +71,6 @@ GetItems(CacheEnum.Expire);
 
 // 只從快取取（無則回傳 null，不執行方法）
 var cached = GetItems(CacheEnum.AlwaysFromCache);
-```
-
-## 專案結構
-
-```
-InfraStack.Utility.AOP/
-├── Core/                    # AOP 攔截基礎
-│   ├── MethodArgs.cs
-│   ├── MethodBoundaryAttribute.cs
-│   └── MethodFlowBehavior.cs
-│
-├── Invocation/              # 方法執行策略
-│   ├── IOnInvoke.cs
-│   ├── OnInvokeSync.cs
-│   ├── OnInvokeTask.cs
-│   └── OnInvokeTaskResult.cs
-│
-├── Cache/                   # 快取功能
-│   ├── CacheAttribute.cs
-│   ├── CacheEnum.cs
-│   ├── CacheDurationEnum.cs
-│   └── ICacheRepository.cs
-│
-├── Dependency/              # 依賴注入
-│   ├── DependencyInjector.cs
-│   ├── IDependencyInjector.cs
-│   └── IRegistration.cs
-│
-├── Extensions/              # DI 擴充
-│   └── IServiceCollectionExtension.cs
-│
-└── Internals/               # 內部工具
-    ├── CacheArgsExtension.cs
-    ├── ReflectionExtension.cs
-    └── TaskStatic.cs
 ```
 
 ## 實作自訂快取儲存庫
@@ -175,4 +139,3 @@ Copyright © 2026 vincenthuang0331
 ## 相依套件
 
 - PostSharp 2025.0.6
-- Microsoft.Extensions.DependencyInjection 9.0.3
