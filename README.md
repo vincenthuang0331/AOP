@@ -153,30 +153,6 @@ foreach (var (CacheKey, WaitCount) in waitingThreads)
 }
 ```
 
-## 發布新版本
-
-專案使用 GitHub Actions 自動打包並發布到 GitHub Packages。
-
-### 發布流程
-
-1. 更新 `InfraStack.Utility.AOP.csproj` 的版本號
-2. Commit 變更
-3. 建立 tag 並 push：
-```bash
-git tag v1.0.1
-git push origin v1.0.1
-```
-
-GitHub Actions 會自動：
-- 建置專案
-- 執行測試
-- 打包 NuGet
-- 發布到 GitHub Packages
-
-### 手動觸發
-
-也可以在 GitHub Actions 頁面手動執行 "Publish NuGet Package" workflow。
-
 ## 授權
 
 MIT License - Copyright © 2026 vincenthuang0331
@@ -184,4 +160,3 @@ MIT License - Copyright © 2026 vincenthuang0331
 ## 相依套件
 
 - PostSharp 2025.0.6
-- Microsoft.Extensions.DependencyInjection 9.0.3
