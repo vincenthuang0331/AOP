@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <Description>AOP cache library for InfraStack, including CacheAttribute,
+            MethodBoundaryAttribute, ICacheRepository, etc.</Description>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <FileVersion>1.0.0</FileVersion>
+        <Version>1.0.0</Version>
+        <Authors>W.H. Huang, Y.H. Su</Authors>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <NoWarn>1701;1702;CS1591</NoWarn>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.3" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.3" />
+        <PackageReference Include="PostSharp" Version="2025.0.6" />
+    </ItemGroup>
+
+</Project>
