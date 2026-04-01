@@ -13,30 +13,9 @@
 
 ### 安裝
 
-**從 GitHub Packages 安裝：**
-
-1. 建立或編輯 `nuget.config`：
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<configuration>
-  <packageSources>
-    <add key="github" value="https://nuget.pkg.github.com/vincenthuang0331/index.json" />
-  </packageSources>
-  <packageSourceCredentials>
-    <github>
-      <add key="Username" value="YOUR_GITHUB_USERNAME" />
-      <add key="ClearTextPassword" value="YOUR_GITHUB_PAT" />
-    </github>
-  </packageSourceCredentials>
-</configuration>
-```
-
-2. 安裝套件：
 ```bash
 dotnet add package InfraStack.Utility.AOP
 ```
-
-> **注意：** 需要有 GitHub Personal Access Token (PAT) 並勾選 `read:packages` 權限
 
 ### 註冊快取儲存庫
 
