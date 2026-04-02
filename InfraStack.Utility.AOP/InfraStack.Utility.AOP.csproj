@@ -20,9 +20,9 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="InfraStack.Utility.Dependency" Version="1.0.0" />
         <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.3" />
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions"
-            Version="9.0.3" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.3" />
         <PackageReference Include="PostSharp" Version="2025.0.6" />
     </ItemGroup>
 
