@@ -22,6 +22,14 @@ jobs:
       with:
         dotnet-version: '8.0.x'
         
+    - name: Configure NuGet source
+      run: |
+        dotnet nuget add source "https://nuget.pkg.github.com/vincenthuang0331/index.json" \
+          --name github \
+          --username ${{ github.actor }} \
+          --password ${{ secrets.GITHUB_TOKEN }} \
+          --store-password-in-clear-text
+        
     - name: Restore dependencies
       run: dotnet restore InfraStack.Utility.AOP/InfraStack.Utility.AOP.csproj
       
