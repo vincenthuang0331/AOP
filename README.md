@@ -13,9 +13,32 @@
 
 ### 安裝
 
+#### 1. 配置 GitHub Packages 認證
+
+此專案依賴於 `InfraStack.Utility.Dependency`，發布在 GitHub Packages 上。首先需要配置認證：
+
+```bash
+# 配置 GitHub Packages 來源（需要 GitHub Personal Access Token）
+dotnet nuget add source "https://nuget.pkg.github.com/vincenthuang0331/index.json" \
+  --name github \
+  --username YOUR_GITHUB_USERNAME \
+  --password YOUR_GITHUB_PAT \
+  --store-password-in-clear-text
+```
+
+**如何獲取 GitHub PAT：**
+1. 前往 https://github.com/settings/tokens/new
+2. Note: 填寫 `NuGet Package Read Access`  
+3. 勾選權限：`read:packages`
+4. 點擊 Generate token 並複製
+
+#### 2. 安裝套件
+
 ```bash
 dotnet add package InfraStack.Utility.AOP
 ```
+
+或在專案目錄執行 `dotnet restore` 還原所有相依套件。
 
 ### 註冊快取儲存庫
 
