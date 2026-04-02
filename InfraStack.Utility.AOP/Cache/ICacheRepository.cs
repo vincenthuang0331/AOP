@@ -1,4 +1,4 @@
-using InfraStack.Utility.AOP.Dependency;
+using InfraStack.Utility.Dependency;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Concurrent;
